@@ -1,4 +1,18 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm test
+yarn commitlint --edit $1
+
+# https://commitlint.js.org/#/guides-local-setup
+# check last 3 commit if valid
+# yarn commitlint --from HEAD~3 --to HEAD --verbose
+
+# git commit -m "foo: this will fail"
+# yarn run v1.22.5
+# $ D:\Code\WebStormProjects\mad-ui-vue\node_modules\.bin\commitlint --edit .git/COMMIT_EDITMSG
+# ⧗   input: foo: this will fail
+# ✖   type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test] [type-enum]
+#
+# ✖   found 1 problems, 0 warnings
+# ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+

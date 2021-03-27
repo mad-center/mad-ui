@@ -8,12 +8,20 @@
 - [x] Lerna
 - [x] ESLint
 - [x] commitizen + cz-conventional-log
+- [x] Husky  + lint-staged
+- [x] commitlint to check commit message syntax
 - [ ] @types d.ts support
-- [ ] Husky or simple-git-hooks + lint-staged
-- [ ] commitlint to check commit message syntax  
 - [ ] Jest
 - [ ] vuad for vue component auto document generation for API.
 - [ ] semantic-release/ standard version
+
+## process
+```
+                   git add
+work area            ->             stage             ->  repository
+local changes -> pre-commit    -> commit    -> pre-push -> push
+                (lint-fix)     commitlint      jest
+```
 
 ## dependencies
 - webpack
@@ -96,7 +104,7 @@ yarn add -D typescript
 lerna publish from-git
 ```
 
-## eslint 
+## eslint
 ```bash
 eslint --init
 ```
