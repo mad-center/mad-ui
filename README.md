@@ -69,7 +69,7 @@ yarn add -D typescript
 ## playground dependencies
 ```
 "dependencies": {
-  "@mad-ui/base": "file:../packages/base"
+  "@mad-ui/base": "^0.0.0"
 },
 ```
 
@@ -95,4 +95,9 @@ yarn add -D typescript
 ## release
 ```
 lerna publish from-git
+```
+
+## eslint 
+```bash
+eslint --init
 ```
