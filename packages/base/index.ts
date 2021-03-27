@@ -3,7 +3,7 @@
 import colors from './color/exports.scss'
 
 const base = {
-  colors
+  colors,
 }
 
 export { base }

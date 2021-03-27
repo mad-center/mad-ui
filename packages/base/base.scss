@@ -4,6 +4,6 @@
 // exports
 @use "./color/exports.scss" as colors;
 
-body{
-    background: colors.$body-bg-color;
+body {
+  background: colors.$body-bg-color;
 }
