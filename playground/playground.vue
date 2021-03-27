@@ -1,13 +1,15 @@
 <template>
   <h1>hello playground...</h1>
+  <mad-button>mad button</mad-button>
 </template>
 
 <script>
-// import LcsButton from "@lcs-components/button";
+import MadButton from '@mad-ui/button'
+
 export default {
   name: 'Playground',
   components: {
-    // LcsButton,
+    MadButton,
   },
 }
 </script>

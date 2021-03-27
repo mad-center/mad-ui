@@ -22,6 +22,8 @@ work area            ->             stage             ->  repository
 local changes -> pre-commit    -> commit    -> pre-push -> push
                 (lint-fix)     commitlint      jest
 ```
+1. git add [some files] or use GUI tool to git add files
+2. yarn run commit
 
 ## dependencies
 - webpack

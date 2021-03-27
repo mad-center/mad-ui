@@ -1,8 +1,8 @@
 <template>
-  <div class="mad-button">
+  <button class="mad-button">
     <!-- your html -->
     <slot />
-  </div>
+  </button>
 </template>
 
 <script lang="ts">
@@ -17,10 +17,23 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .mad-button {
-  /* your style */
-  border: 1px solid black;
+  background-color: white;
+  color: black;
+  outline: none;
+  border: 2px solid black;
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 }
 </style>

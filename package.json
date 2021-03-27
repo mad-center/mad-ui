@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.ts,.vue ./packages/",
     "lint-fix": "eslint --ext .js,.ts,.vue ./packages/  --fix",
     "diff": "lerna diff",
+    "bootstrap": "lerna bootstrap",
     "new": "ts-node --project ./scripts/tsconfig.json ./scripts/new.ts",
     "playground": "webpack serve --config=./playground/webpack.playground.config.js",
     "prepare": "husky install"
