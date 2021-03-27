@@ -1,5 +1,20 @@
 # document
 
+## Table of Contents
+
+- [Features](#features)
+- [process](#process)
+- [dependencies](#dependencies)
+- [sass module](#sass-module)
+- [playground dependencies](#playground-dependencies)
+- [button demo component principle](#button-demo-component-principle)
+- [lerna packages management](#lerna-packages-management)
+- [version bump](#version-bump)
+- [release](#release)
+- [eslint](#eslint)
+
+## Features
+
 > Goal
 
 - [x] Vue 3
@@ -85,7 +100,7 @@ yarn add -D typescript
 }
 ```
 
-> # {} 表示字符串插值
+> #{} 表示字符串插值
 
 ```
 @use "./typography/exports.scss" as typography;
@@ -133,4 +148,3 @@ lerna publish from-git
 ```bash
 eslint --init
 ```
-
