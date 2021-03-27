@@ -1,0 +1,11 @@
+// If your library aim to support theme(not opinionated), then you should use css variables to custom your components
+[data-theme="dark"] {
+  --text-color: #f6f6f6;
+  --bkg-color: #1a1c20;
+}
+
+[data-theme="oled"] {
+  --text-color: #f6f6f6;
+  --bkg-color: #000;
+  --bkg-logo: #000;
+}
