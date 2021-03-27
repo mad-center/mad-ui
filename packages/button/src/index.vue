@@ -1,7 +1,7 @@
 <template>
   <div class="mad-button">
     <!-- your html -->
-    <slot/>
+    <slot />
   </div>
 </template>
 
