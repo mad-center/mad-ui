@@ -8,6 +8,7 @@
     "commit": "cz -a",
     "workspaces:info": "yarn workspaces info",
     "prettier": "prettier --write ./packages/",
+    "lint:style": "npx stylelint ./packages/**/*.scss",
     "lint": "eslint --ext .js,.ts,.vue ./packages/",
     "lint-fix": "eslint --ext .js,.ts,.vue ./packages/  --fix",
     "diff": "lerna diff",
