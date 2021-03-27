@@ -1,8 +1,8 @@
 // reset
-@use "./reset.scss";
+@use './reset.scss';
 
 // exports
-@use "./color/exports.scss" as colors;
+@use './color/exports.scss' as colors;
 
 body {
   background: colors.$body-bg-color;

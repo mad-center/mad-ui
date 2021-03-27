@@ -1,66 +1,82 @@
 # document
+
 > Goal
+
 - [x] Vue 3
 - [x] TypeScript 4
 - [x] Babel 7
 - [x] Webpack 5
-- [x] Hot Module Replacement
+  - [x] Hot Module Replacement
 - [x] Lerna 4
 - [x] ESLint
 - [x] commitizen + cz-conventional-log
-- [x] Husky + lint-staged
-- [x] commitlint to check commit messages
+- [x] commitlint(check commit messages)
+- [x] Husky(git hooks) + lint-staged(lint staged git files)
 - [x] Jest
-- [ ] @types d.ts support
+- [x] @types declaration files support
 - [ ] vuad for vue component auto document generation for API.
 - [ ] semantic-release/ standard version
 
 ## process
+
 ```
                    git add
 work area            ->             stage             ->  repository
 local changes -> pre-commit    -> commit    -> pre-push -> push
                 (lint-fix)     commitlint      jest
 ```
+
 1. git add [some files] or use GUI tool to git add files
 2. yarn run commit
 
 ## dependencies
+
 - webpack
+
 ```bash
 yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 ```
+
 > clean-webpack-plugin or rimraf to remove dist folder
 
 - vue
+
 ```bash
 yarn add -D vue-loader@next vue@next @vue/compiler-sfc @vue/component-compiler-utils
 ```
 
 - css/sass
+
 ```bash
 yarn add -D style-loader css-loader postcss-loader postcss postcss-preset-env sass-loader sass
 ```
+
 > mini-css-extract-plugin to replace style-loader
 
 - babel
+
 ```bash
 yarn add -D babel-loader @babel/cli @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/preset-typescript
 ```
+
 > deprecate ts-loader: use babel7 @babel/preset-typescript to replace ts-loader
 
 - auto generate template
+
 ```bash
 yarn add -D yargs chalk ts-node
 ```
 
 - typescript aupport
+
 ```bash
 yarn add -D typescript
 ```
 
 ## sass module
+
 `./typography/exports.scss`
+
 ```
 @import './variables.scss';
 
@@ -68,7 +84,9 @@ yarn add -D typescript
     fontHeading: #{$font-heading};
 }
 ```
-> #{} 表示字符串插值
+
+> # {} 表示字符串插值
+
 ```
 @use "./typography/exports.scss" as typography;
 
@@ -76,6 +94,7 @@ yarn add -D typescript
 ```
 
 ## playground dependencies
+
 ```
 "dependencies": {
   "@mad-ui/base": "^0.0.0"
@@ -83,6 +102,7 @@ yarn add -D typescript
 ```
 
 ## button demo component principle
+
 - use vue 3.0 composition API setup()/ref to define reactive data
 - use css variant class to define variant style
 
@@ -103,11 +123,13 @@ yarn add -D typescript
 > lerna version --conventional-commits --yes # auto
 
 ## release
+
 ```
 lerna publish from-git
 ```
 
 ## eslint
+
 ```bash
 eslint --init
 ```
