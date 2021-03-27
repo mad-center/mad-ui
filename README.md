@@ -5,13 +5,13 @@
 - [x] Babel 7
 - [x] Webpack 5
 - [x] Hot Module Replacement
-- [x] Lerna
+- [x] Lerna 4
 - [x] ESLint
 - [x] commitizen + cz-conventional-log
-- [x] Husky  + lint-staged
-- [x] commitlint to check commit message syntax
+- [x] Husky + lint-staged
+- [x] commitlint to check commit messages
+- [x] Jest
 - [ ] @types d.ts support
-- [ ] Jest
 - [ ] vuad for vue component auto document generation for API.
 - [ ] semantic-release/ standard version
 
@@ -97,6 +97,7 @@ yarn add -D typescript
 - 存在BREAKING CHANGE提交： 需要更新major版本
 
 > lerna version --conventional-commits
+
 > lerna version --conventional-commits --yes # auto
 
 ## release
@@ -109,41 +110,3 @@ lerna publish from-git
 eslint --init
 ```
 
-## lint-staged and simple-git-hooks
-```
-$ npx simple-git-hooks
-[INFO] Successfully set the pre-commit with command: lint-staged
-[INFO] Successfully set all git hooks
-```
-```bash
-$ yarn git-cz -a
-$ D:\Code\WebStormProjects\vue-components-starter\node_modules\.bin\git-cz -a
-cz-cli@4.2.3, cz-conventional-changelog@3.3.0
-
-? Select the type of change that you're committing: test:     Adding missing tests or correcting existing tests
-? What is the scope of this change (e.g. component or file name): (press enter to skip) no
-? Write a short, imperative tense description of the change (max 90 chars):
- (16) test lint-staged
-? Provide a longer description of the change: (press enter to skip)
-
-? Are there any breaking changes? No
-? Does this change affect any open issues? No
-warning: LF will be replaced by CRLF in package.json.
-The file will have its original line endings in your working directory
-[STARTED] Preparing...
-[SUCCESS] Preparing...
-[STARTED] Running tasks...
-[STARTED] Running tasks for *.{js,ts,vue}
-[STARTED] echo ============lint-staged==============
-[SUCCESS] echo ============lint-staged==============
-[SUCCESS] Running tasks for *.{js,ts,vue}
-[SUCCESS] Running tasks...
-[STARTED] Applying modifications...
-[SUCCESS] Applying modifications...
-[STARTED] Cleaning up...
-[SUCCESS] Cleaning up...
-[master ed193c4] test(no): test lint-staged
- 3 files changed, 10 insertions(+), 2 deletions(-)
- create mode 100644 test.js
-Done in 21.25s.
-```
