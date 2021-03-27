@@ -15,5 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['vue', '@typescript-eslint', 'prettier'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/ban-types': 'off',
+  },
 }
