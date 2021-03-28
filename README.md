@@ -28,8 +28,12 @@
 - [x] commitlint(check commit messages)
 - [x] Husky(git hooks) + lint-staged(lint staged git files)
 - [x] Jest
+  - vue component test
 - [x] @types declaration files support
-- [ ] vuad for vue component auto document generation for API.
+- [ ] vue component API document generation
+  > Which format is better for document maintenance?
+  - @vuese|https://github.com/vuese
+  - @vuedoc
 - [ ] semantic-release/ standard version
 
 ## process

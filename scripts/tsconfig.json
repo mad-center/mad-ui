@@ -1,10 +1,10 @@
 {
-    "extends": "../tsconfig.json",
-    "compilerOptions": {
-        "module": "CommonJS"
-    },
-    "include": [
-        "./**/*",
-        "../typings/**/*"
-    ],
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS"
+  },
+  "include": [
+    "./**/*",
+    "../typings/**/*"
+  ]
 }

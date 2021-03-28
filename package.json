@@ -17,7 +17,7 @@
     "new": "ts-node --project ./scripts/tsconfig.json ./scripts/new.ts",
     "playground": "webpack serve --config=./playground/webpack.playground.config.js",
     "prepare": "husky install",
-    "gimtoc": "gimtoc -f README.md -s \"Table of Contents\" -o README.md"
+    "readme-toc": "gimtoc -f README.md -s \"Table of Contents\" -o README.md"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",

@@ -54,6 +54,7 @@ module.exports = {
           },
         ],
       },
+      // asset module to load txt file or image
     ],
   },
   resolve: {
