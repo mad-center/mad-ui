@@ -60,13 +60,8 @@ import {
   views,
 } from './router/routes'
 
-import MadButton from '@mad-ui/button'
-import MadAlert from '@mad-ui/alert'
-
 export default {
   components: {
-    MadButton,
-    MadAlert,
     // MadTreeItem,
   },
   computed: {

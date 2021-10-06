@@ -22,7 +22,8 @@
 - [x] Babel 7
 - [x] Webpack 5
   - [x] Hot Module Replacement
-- [x] Lerna 4
+- [x] ~~Lerna 4~~
+  > too complex. NOT use it for small project.
 - [x] ESLint
 - [x] commitizen + cz-conventional-log
 - [x] commitlint(check commit messages)

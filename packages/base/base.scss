@@ -1,9 +1,0 @@
-// reset
-@use './reset.scss';
-
-// exports
-@use './color/exports.scss' as colors;
-
-body {
-  background: colors.$body-bg-color;
-}
