@@ -28,13 +28,12 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              // refer https://webpack.js.org/loaders/css-loader/#importloaders
               importLoaders: 2, // 0 => no loaders (default); 1 => postcss-loader; 2 => postcss-loader, sass-loader
+              // refer https://webpack.js.org/loaders/css-loader/#modules and https://github.com/webpack-contrib/css-loader#auto
               modules: {
-                compileType: 'module',
-                mode: 'global',
+                auto: true,
               },
-              esModule: false,
-              sourceMap: false,
             },
           },
           {
