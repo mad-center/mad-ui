@@ -1,17 +1,26 @@
+<template>
+  <button
+    class="mad-button"
+    :class="[
+      size,
+      color,
+      light ? 'variant-light' : '',
+      fullwidth ? 'variant-fullwidth' : '',
+      outlined ? 'variant-outlined' : '',
+      rounded ? 'variant-rounded' : '',
+    ]"
+    :disabled="!disabled ? null : disabled"
+  >
+    <span v-if="$slots.default"><slot></slot></span>
+  </button>
+</template>
+
 <script>
-import { h } from 'vue'
 import { colorMapValues, sizes } from '../../utils/validator'
 
 export default {
   name: 'MadButton',
   props: {
-    tag: {
-      type: String,
-      default: 'button',
-      validator: function (value) {
-        return ['button', 'a', 'input'].indexOf(value) !== -1
-      },
-    },
     size: {
       type: String,
       default: '',
@@ -42,42 +51,10 @@ export default {
       type: Boolean,
     },
   },
-  render() {
-    // input element no slots
-    const slots = this.tag === 'input' ? null : this.$slots.default()
-    const basicStyle = this.$style['button']
-    const sizeStyle = this.size ? this.$style[this.size] : ''
-    const colorStyle = this.color ? this.$style[this.color] : ''
-    const lightStyle = this.light ? this.$style['variant-light'] : ''
-    const fullwidthStyle = this.fullwidth
-      ? this.$style['variant-fullwidth']
-      : ''
-    const outlinedStyle = this.outlined ? this.$style['variant-outlined'] : ''
-    const roundedStyle = this.rounded ? this.$style['variant-rounded'] : ''
-    // fix `a` tag disabled='false' bug
-    const disabledProp =
-      this.tag === 'a' && !this.disabled ? null : { disabled: this.disabled }
-    return h(
-      this.tag,
-      {
-        class: [
-          basicStyle,
-          sizeStyle,
-          colorStyle,
-          lightStyle,
-          fullwidthStyle,
-          outlinedStyle,
-          roundedStyle,
-        ],
-        ...disabledProp,
-      },
-      slots
-    )
-  },
 }
 </script>
 
-<style module lang="scss">
+<style lang="scss">
 @use 'sass:color';
 @import '../../styles/mixins/all';
 
@@ -144,7 +121,7 @@ $button-focus-box-shadow-color: lighten(
   }
 }
 
-.button {
+.mad-button {
   //display: flex;
   //align-items: center;
   outline: none;
