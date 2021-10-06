@@ -31,9 +31,10 @@
   - vue component test
 - [x] @types declaration files support
 - [ ] vue component API document generation
-  > Which format is better for document maintenance?
-  - @vuese|https://github.com/vuese
-  - @vuedoc
+  - ~~@vuese|https://github.com/vuese~~
+  - ~~@vuedoc~~
+    > Now no mature solution for auto-generating Vue 3 API doc
+  - decide to use manually hand-written API
 - [ ] semantic-release/ standard version
 
 ## process
@@ -47,6 +48,14 @@ local changes -> pre-commit    -> commit    -> pre-push -> push
 
 1. git add [some files] or use GUI tool to git add files
 2. yarn run commit
+
+### issue
+
+> 'yarn' 不是内部或外部命令，也不是可运行的程序 或批处理文件。
+
+```bash
+npm install -g yarn
+```
 
 ## dependencies
 
@@ -104,7 +113,7 @@ yarn add -D typescript
 }
 ```
 
-> #{} 表示字符串插值
+`#{}` 表示字符串插值
 
 ```
 @use "./typography/exports.scss" as typography;
