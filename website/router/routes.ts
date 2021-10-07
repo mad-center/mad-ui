@@ -187,10 +187,10 @@ const patterns = [
     name: 'reveal-image',
     text: 'Reveal image',
   },
-  // {
-  //   name: 'wave',
-  //   text: 'Wave',
-  // },
+  {
+    name: 'wave',
+    text: 'Wave',
+  },
 ]
 
 const plugins = [

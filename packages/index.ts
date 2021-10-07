@@ -51,7 +51,7 @@ import MadTextArea from './text-area'
 import MadTimeline from './timeline'
 import MadTreeItem from './tree-item'
 // import MadUtils from './utils'
-// import MadWave from './wave'
+import MadWave from './wave'
 
 const components = [
   MadAfterImage,
@@ -104,7 +104,7 @@ const components = [
   MadTextArea,
   MadTimeline,
   MadTreeItem,
-  // MadWave,
+  MadWave,
 ]
 
 const plugins: any[] = [
@@ -172,7 +172,7 @@ export {
   MadTextArea,
   MadTimeline,
   MadTreeItem,
-  // MadWave,
+  MadWave,
   install,
 }
 

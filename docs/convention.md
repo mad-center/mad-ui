@@ -5,3 +5,5 @@
 - style scoped lang=scss 建议不用 避免提升specific复杂度
 - 推荐使用tyle lang=scss 然后给每个组件标记一个唯一的css class。
 例如mad-button,mad-这个前缀就代表着这个框架。
+
+BEM or simple word
