@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MadInput from '@/form/MadInput'
+import MadInput from '../../input'
 
 /**
  * https://magic-akari.github.io/solved-by-flexbox/demos/input-add-ons/

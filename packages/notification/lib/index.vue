@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../scss/mixins/all';
+@import '../../styles/mixins/all';
 
 $notification-background-color: $light !default;
 $notification-code-background-color: $color-white !default;

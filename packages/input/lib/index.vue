@@ -15,7 +15,7 @@
  * state
  */
 
-import { colorMapSemanticValues, sizes } from '@/../utils/propValidateHelper'
+import { colorMapSemanticValues, sizes } from '../../utils/validator'
 
 export default {
   name: 'MadInput',

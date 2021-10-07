@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { sizes } from 'packages/utils/validator'
+import { sizes } from '../../utils/validator'
 
 /**
  * sizes variants

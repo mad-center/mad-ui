@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../scss/mixins/all';
+@import '../../styles/mixins/all';
 
 $progress-bar-background-color: $light !default;
 $progress-value-background-color: $dark !default;

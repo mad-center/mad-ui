@@ -2,7 +2,7 @@
 node_modules
 yarn.lock
 yarn-error.log
-/playground/yarn.lock
-/playground/yarn-error.log
+/website/yarn.lock
+/website/yarn-error.log
 /packages/**/package-lock.json
 itory inside your current repository

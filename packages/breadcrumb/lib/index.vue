@@ -1,5 +1,5 @@
 <script>
-import { sizes } from '@/../utils/propValidateHelper'
+import { sizes } from '../../utils/validator'
 import { h } from 'vue'
 
 /**

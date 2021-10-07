@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../scss/mixins/_all';
+@import '../../styles/mixins/_all';
 
 $pagination-color: $text !default;
 $pagination-border-color: $border !default;
