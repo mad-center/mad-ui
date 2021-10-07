@@ -101,5 +101,7 @@ module.exports = {
     historyApiFallback: true,
     port: 3001,
     hot: true,
+    host: 'localhost',
+    disableHostCheck: true,
   },
 }

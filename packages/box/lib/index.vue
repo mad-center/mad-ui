@@ -1,36 +1,20 @@
-<script>
-import { h } from 'vue'
+<template>
+  <div class="mad-box">
+    <slot v-if="$slots.default"></slot>
+  </div>
+</template>
 
+<script>
 /**
  * A white box to contain other elements.
  * A container with a shadow, a border, a border radius, and padding.
  */
 export default {
   name: 'MadBox',
-  props: {
-    tag: {
-      type: String,
-      default: 'div',
-    },
-  },
-  render() {
-    const tag = this.tag
-    return h(
-      tag,
-      {
-        class: this.$style.box,
-      },
-      this.$slots.default()
-    )
-  },
 }
 </script>
 
-<!--https://github.com/vuejs/vue-next/issues/1539-->
-<!-- when use scoped style with render function, style is not working-->
-<!-- work ground: use template or CSS modules-->
-<!-- here i use css module because i don't want to write ugly template-->
-<style module lang="scss">
+<style lang="scss">
 @import '../../styles/mixins/block';
 
 //props
@@ -44,7 +28,7 @@ $box-padding: 1.25rem !default;
 $box-link-hover-shadow: 0 0.5em 1em -0.125em rgba(black, 0.1), 0 0 0 1px grey !default;
 $box-link-active-shadow: inset 0 1px 2px rgba(black, 0.2), 0 0 0 1px grey !default;
 
-.box {
+.mad-box {
   @include block;
   display: block;
   background-color: $box-background-color;
@@ -53,9 +37,8 @@ $box-link-active-shadow: inset 0 1px 2px rgba(black, 0.2), 0 0 0 1px grey !defau
   box-shadow: $box-shadow;
   color: $box-color;
   padding: $box-padding;
-}
+  cursor: pointer;
 
-a.box {
   &:hover,
   &:focus {
     box-shadow: $box-link-hover-shadow;

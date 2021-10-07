@@ -23,6 +23,9 @@
 ## CSS 框架
 [] jgthms.Documentation | Bulma: Free, open source, and modern CSS framework based on Flexbox[EB/OL].[2020-1-21].https://bulma.io/documentation/.
 
+- https://muse-ui.org 一个很优秀的vue 2 ui框架，可惜不维护了
+
+
 ## CSS 框架设计方法论
 
 - Bootstrap team.Approach[EB/OL].[2020-1-24].https://v5.bootcss.com/docs/extend/approach/.
@@ -35,3 +38,20 @@
 ## JS 框架
 
 [] vuejs.Vue 3 core documentation.[EB/OL].[2020-2-9].https://v3.vuejs.org/guide.
+
+## JS Animation Libraries
+
+- Mo.js
+  https://mojs.github.io/tutorials/ 2D动画。自带时间线和播放器编辑器。
+- Anime
+  https://animejs.com/
+- Greensock
+  https://greensock.com/gsap/
+- Three.js
+  https://threejs.org/ 偏向3D动画
+- Popmotion
+  https://popmotion.io/ 2D动画. A functional, flexible JavaScript animation library
+- Pixijs
+  https://www.pixijs.com/ Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
+- Kute
+  https://thednp.github.io/kute.js/ 2D动画

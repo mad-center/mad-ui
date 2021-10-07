@@ -5,6 +5,7 @@ import MadAlert from './alert'
 import MadBlock from './block'
 import MadBreadcrumb from './breadcrumb'
 import MadButton from './button'
+import MadBox from './box'
 import MadCircleRipple from './circle-ripple'
 import MadCircularRipple from './circular-ripple'
 import MadCircularText from './circular-text'
@@ -59,6 +60,7 @@ const components = [
   MadBlock,
   MadBreadcrumb,
   MadButton,
+  MadBox,
   MadCircleRipple,
   MadCircularRipple,
   MadCircularText,
@@ -127,6 +129,7 @@ export {
   MadBlock,
   MadBreadcrumb,
   MadButton,
+  MadBox,
   MadCircleRipple,
   MadCircularRipple,
   MadCircularText,
