@@ -1,0 +1,139 @@
+@use 'sass:color';
+
+@import "../../packages/scss/utilities/functions";
+@import "../../packages/scss/vars/derived-variables";
+
+// test luminance and lightness
+$primary-luminance: luminance($primary) !default;
+$info-luminance: luminance($info) !default;
+$success-luminance: luminance($success) !default;
+$warning-luminance: luminance($warning) !default;
+$danger-luminance: luminance($danger) !default;
+$light-luminance: luminance($light) !default;
+$dark-luminance: luminance($dark) !default;
+
+$primary-lightness: lightness($primary) !default;
+$info-lightness: lightness($info) !default;
+$success-lightness: lightness($success) !default;
+$warning-lightness: lightness($warning) !default;
+$danger-lightness: lightness($danger) !default;
+$light-lightness: lightness($light) !default;
+$dark-lightness: lightness($dark) !default;
+
+@debug "luminance vs lightness";
+@debug "==========================================";
+@debug ($primary, $primary-luminance, $primary-lightness),
+        ($info, $info-luminance, $info-lightness),
+        ($success, $success-luminance, $success-lightness),
+        ($warning, $warning-luminance, $warning-lightness),
+        ($danger, $danger-luminance, $danger-lightness),
+        ($light, $light-luminance, $light-lightness),
+        ($dark, $dark-luminance, $dark-lightness);
+@debug "==========================================";
+
+// conclusion: luminance value like lightness but they are different
+//(#000000, 0, 0%),
+//(#3298dc, 0.2830188952, 53%),
+//(#48c774, 0.4348551951, 53%),
+//(#ffdd57, 0.736  6102273, 67%),
+//(#f14668, 0.2408056622, 61%),
+//(#eeeeee, 0.8549926081, 93.3333333333%),
+//(#616161, 0.119538428, 38.0392156863 %)
+
+$primary-findColorInvert: invert-custom($primary) !default;
+$info-findColorInvert: invert-custom($info) !default;
+$success-findColorInvert: invert-custom($success) !default;
+$warning-findColorInvert: invert-custom($warning) !default;
+$danger-findColorInvert: invert-custom($danger) !default;
+$light-findColorInvert: invert-custom($light) !default;
+$dark-findColorInvert: invert-custom($dark) !default;
+
+$primary-invert: invert($primary) !default;
+$info-invert: invert($info) !default;
+$success-invert: invert($success) !default;
+$warning-invert: invert($warning) !default;
+$danger-invert: invert($danger) !default;
+$light-invert: invert($light) !default;
+$dark-invert: invert($dark) !default;
+
+@debug "invert-custom vs invert";
+@debug "==========================================";
+@debug ($primary, $primary-findColorInvert, $primary-invert),
+        ($info, $info-findColorInvert, $info-invert),
+        ($success, $success-findColorInvert, $success-invert),
+        ($warning, $warning-findColorInvert, $warning-invert),
+        ($danger, $danger-findColorInvert, $danger-invert),
+        ($light, $light-findColorInvert, $light-invert),
+        ($dark, $dark-findColorInvert, $dark-invert);
+@debug "==========================================";
+
+// invert-custom return only white or rgba(0, 0, 0, 0.7),
+// built-in invert return the inverse (negative) of a color
+// conclusion: use invert-custom
+//(#000000, #fff, white),
+//(#3298dc, #fff, #cd6723),
+//(#48c774, #fff, #b7388b),
+//(#ffdd57, rgba(0,  0, 0, 0.7), #0022a8),
+//(#f14668, #fff, #0eb997),
+//(#eeeeee, rgba(0, 0, 0, 0.7), #111111),
+//(#616161, #fff, #9e9e9e)
+
+$primary-light: lighten-legacy($primary) !default;
+$info-light: lighten-legacy($info) !default;
+$success-light: lighten-legacy($success) !default;
+$warning-light: lighten-legacy($warning) !default;
+$danger-light: lighten-legacy($danger) !default;
+
+// 80% is ok
+$default-lighten-weight: 80%;
+$primary-lighten: scale-color($primary, $lightness: $default-lighten-weight) !default;
+$info-lighten: scale-color($info, $lightness: $default-lighten-weight) !default;
+$success-lighten: scale-color($success, $lightness: $default-lighten-weight) !default;
+$warning-lighten: scale-color($warning, $lightness: $default-lighten-weight) !default;
+$danger-lighten: scale-color($danger, $lightness: $default-lighten-weight) !default;
+@debug "lighten-legacy vs lighten";
+@debug "==========================================";
+@debug ($primary, $primary-light, $primary-lighten),
+        ($info, $info-light, $info-lighten),
+        ($success, $success-light, $success-lighten),
+        ($warning, $warning-light, $warning-lighten),
+        ($danger, $danger-light, $danger-lighten);
+@debug "==========================================";
+// use scale-color()
+//(#000000, whitesmoke, #cccccc),
+//(#42a5f5, #ecf6fe, #d9edfd),
+//(#66bb6a, #f1f9f1, #e0f1e1),
+//(#fbc02d, #fff9eb, #fef2d5),
+//(#ef5350, #fdedec, #fcdddc)
+
+$primary-dark: darken-legacy($primary) !default;
+$info-dark: darken-legacy($info) !default;
+$success-dark: darken-legacy($success) !default;
+$warning-dark: darken-legacy($warning) !default;
+$danger-dark: darken-legacy($danger) !default;
+
+// -30% is ok
+$default-darken-weight: -30%;
+$primary-darken: scale-color($primary, $lightness: $default-darken-weight) !default;
+$info-darken: scale-color($info, $lightness: $default-darken-weight) !default;
+$success-darken: scale-color($success, $lightness: $default-darken-weight) !default;
+$warning-darken: scale-color($warning, $lightness: $default-darken-weight) !default;
+$danger-darken: scale-color($danger, $lightness: $default-darken-weight) !default;
+
+@debug "darken-legacy vs darken";
+@debug "==========================================";
+@debug ($primary, $primary-dark, $primary-darken),
+        ($info, $info-dark, $info-darken),
+        ($success, $success-dark, $success-darken),
+        ($warning, $warning-dark, $warning-darken),
+        ($danger, $danger-dark, $danger-darken);
+@debug "==========================================";
+// use scale-color()
+//(#000000, #919191, black),
+//(#42a5f5, #0a6dbd, #0b77cf),
+//(#66bb6a, #387f3c, #3e8c42),
+//(#fbc02d, #916803, #cb9204),
+//(#ef5350, #ce1613, #cd1613)
+
+// Do better
+// write a web color visualizer tool ro visualize $weight change and color invert effects

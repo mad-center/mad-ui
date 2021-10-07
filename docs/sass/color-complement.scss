@@ -1,0 +1,15 @@
+// https://sass-lang.com/documentation/modules/color
+// rotate 180 degree
+// see https://zh.wikipedia.org/wiki/%E4%BA%92%E8%A3%9C%E8%89%B2
+
+@use "sass:color";
+
+// Hue 222deg becomes 42deg.
+@debug color.complement(#6b717f); // #7f796b
+
+// Hue 164deg becomes 344deg.
+@debug color.complement(#d2e1dd); // #e1d2d6
+
+// Hue 210deg becomes 30deg.
+@debug color.complement(#036); // #663300
+

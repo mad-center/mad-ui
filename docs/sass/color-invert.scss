@@ -1,0 +1,15 @@
+@use 'sass:color';
+
+$invert: invert(#000);
+$invert100: invert(#000, 100%);
+$invert50: invert(#000, 50%);
+$invert10: invert(#000, 10%);
+@debug $invert; // default $weight is 100%
+@debug $invert100;
+@debug $invert50;
+@debug $invert10;
+
+//color-invert.scss:7 Debug: white
+//color-invert.scss:8 Debug: white
+//color-invert.scss:9 Debug: gray
+//color-invert.scss:10 Debug: #1a1a1a
