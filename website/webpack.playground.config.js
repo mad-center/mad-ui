@@ -14,6 +14,9 @@ module.exports = {
   entry: {
     app: './website/index.ts',
   },
+  output: {
+    path: '/dist',
+  },
   module: {
     rules: [
       {
@@ -103,5 +106,6 @@ module.exports = {
     hot: true,
     host: 'localhost',
     disableHostCheck: true,
+    contentBase: ['./packages', './website', '/dist'], // both src and output dirs
   },
 }

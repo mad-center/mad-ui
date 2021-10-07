@@ -6,6 +6,5 @@
       repudiandae velit, voluptas, voluptate voluptatem? Ex iusto labore
       praesentium. Doloremque, vel?
     </p>
-    123
   </mad-box>
 </template>

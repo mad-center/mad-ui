@@ -9,6 +9,7 @@ export default {
   name: 'MadCircularRipple',
   methods: {
     onClick(event) {
+      console.log('ripple test')
       // creat ripple el
       const ripple = document.createElement('div')
       ripple.classList.add('mad-circular-ripple')
