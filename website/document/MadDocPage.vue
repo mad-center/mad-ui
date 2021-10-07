@@ -49,8 +49,7 @@ export default {
       return marked(this.splitContent[0], { renderer })
     },
     nextContent() {
-      const string = this.splitContent[1]
-      return string ? marked(this.splitContent[1], { renderer }) : ''
+      return marked(this.splitContent[1], { renderer })
     },
   },
 }
