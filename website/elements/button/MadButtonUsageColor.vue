@@ -8,5 +8,5 @@
   <mad-button :color="'info'">info</mad-button>
   <mad-button :color="'success'">success</mad-button>
   <mad-button :color="'warning'">warning</mad-button>
-  <mad-button :color="'danger'">danger</mad-button>
+  <mad-button color="danger">danger</mad-button>
 </template>
